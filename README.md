@@ -3,7 +3,7 @@ Powershell scripts for crypto wallets
 
 # Automatic email reporting sript
 
-for ($i = 1; $i -gt 0; $i++) {
+> for ($i = 1; $i -gt 0; $i++) {
 	$coin = WALLET_PATH\WALLET-cli.exe -rpcuser=USER_NAME -rpcpassword=USER_PASSWORD -rpcport=USER_PORT getbalance
 	$date = get-date
 	$result = "<div>" + "COIN_NAME: " + $date + " - " + $coin + "</div>"
