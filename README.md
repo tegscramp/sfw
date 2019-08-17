@@ -1,8 +1,14 @@
-# SFW
-Powershell scripts for crypto wallets
+# Scripts for wallets
+Powershell scripts for crypto wallets.
+Powershell скрипты для атоматизации рутинных задач с криптокошельками.
 
 ## Automatic email reporting sript
-
+Скрипт для отправки отчета по балансу через определенный интервал времени.
+Алгоритм формирования отчета следующий: 
+- Создается файл report.txt;
+- Получаем текущий баланс кошелька и записываем его в конец файла report.txt;
+- Данные из report.txt отправляются на указанную электронную почту.
+- Действие зациклено и повторяется через указанный интервал времени.
 
 	for ($i = 1; $i -gt 0; $i++) {
 		$coin = WALLET_PATH\WALLET-cli.exe -rpcuser=USER_NAME -rpcpassword=USER_PASSWORD -rpcport=USER_PORT getbalance
@@ -11,6 +17,7 @@ Powershell scripts for crypto wallets
 		$report_subject = "COIN_NAME: " + $date
 		$result | Out-File WALLET_PATH\report.txt -Append
 		$report = Get-Content WALLET_PATH\report.txt
+		
 		#send email
 		$From = "examle@examle.com"
 		$To = "examle@examle.com"
