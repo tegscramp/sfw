@@ -2,7 +2,7 @@
 Powershell scripts for crypto wallets.
 Powershell скрипты для атоматизации рутинных задач с криптокошельками.
 
-## Automatic email reporting sript
+## Automatic email reporting script
 Скрипт для отправки отчета по балансу через определенный интервал времени.
 Алгоритм формирования отчета следующий: 
 - Создается файл report.txt;
